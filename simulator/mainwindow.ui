@@ -1,0 +1,1527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>980</width>
+    <height>637</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>simulator_GUI_V0_3</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="ConnectBuildPushButton">
+    <property name="geometry">
+     <rect>
+      <x>789</x>
+      <y>38</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>建立通信</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SelfCheckPushButton">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>38</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>自检</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="EnablePushButton">
+    <property name="geometry">
+     <rect>
+      <x>789</x>
+      <y>67</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>工作使能</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="DisablePushButton">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>67</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>休眠</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="TextEdit">
+    <property name="geometry">
+     <rect>
+      <x>771</x>
+      <y>149</y>
+      <width>199</width>
+      <height>461</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="ModeTab">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>751</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="ManualModeCurrentTab">
+     <attribute name="title">
+      <string>手动模式</string>
+     </attribute>
+     <widget class="QToolBox" name="TargetJammingToolBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>741</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="widget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>741</width>
+         <height>479</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>目标参数</string>
+       </attribute>
+       <widget class="QTabWidget" name="TargetParamTypeTab">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>761</width>
+          <height>561</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="TargetParamType0CurrentTab">
+         <attribute name="title">
+          <string>方式0</string>
+         </attribute>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>271</width>
+            <height>421</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>发射雷达与目标速度（M/S）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="SpeedTranLineEditType0"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>发射雷达与目标速度（M/S）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="SpeedRecvLineEditType0"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>功率（dBm）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="PowerLineEditType0"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>发射距离（M）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="DistanceTranLineEditType0"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>接收距离（M）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="DistanceRecvLineEditType0"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>阵面坐标系下目标俯仰角（°）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="ThetaLineEditType0"/>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>阵面坐标系下目标方位角（°）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLineEdit" name="PhiLineEditType0"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="TargetParamType1CurrentTab">
+         <attribute name="title">
+          <string>方式1</string>
+         </attribute>
+         <widget class="QTextEdit" name="TargetParamTypeTextEdit1">
+          <property name="geometry">
+           <rect>
+            <x>310</x>
+            <y>10</y>
+            <width>421</width>
+            <height>441</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>6</x>
+            <y>11</y>
+            <width>291</width>
+            <height>381</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="formLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>发射雷达与目标速度（M/S）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="SpeedTranLineEditType1"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>发射雷达与目标速度（M/S）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="SpeedRecvLineEditType1"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>发射距离（M）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="DistanceTranLineEditType1"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>接收距离（M）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="DistanceRecvLineEditType1"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>阵面坐标系下目标俯仰角（°）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="ThetaLineEditType1"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_22">
+             <property name="text">
+              <string>阵面坐标系下目标方位角（°）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="PhiLineEditType1"/>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_23">
+             <property name="text">
+              <string>Pt（dBm）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLineEdit" name="PtLineEditType1"/>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_24">
+             <property name="text">
+              <string>G（dBm）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QLineEdit" name="GLineEditType1"/>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_25">
+             <property name="text">
+              <string>Ae（dBm）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QLineEdit" name="AeLineEditType1"/>
+           </item>
+           <item row="9" column="0" colspan="2">
+            <widget class="QLabel" name="label_26">
+             <property name="text">
+              <string>目标固联坐标系下视线坐标系X轴对应的俯仰角（°）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0" colspan="2">
+            <widget class="QLabel" name="label_27">
+             <property name="text">
+              <string>目标固联坐标系下视线坐标系X轴对应的方位角（°）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLineEdit" name="TargetCoordinateThetaLineEditType1"/>
+           </item>
+           <item row="12" column="1">
+            <widget class="QLineEdit" name="TargetCoordinatePhiLineEditType1"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="TargetParamType2CurrentTab">
+         <attribute name="title">
+          <string>方式2</string>
+         </attribute>
+         <widget class="QTextEdit" name="TargetParamTypeTextEdit2">
+          <property name="geometry">
+           <rect>
+            <x>301</x>
+            <y>159</y>
+            <width>431</width>
+            <height>301</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>1</x>
+            <y>0</y>
+            <width>291</width>
+            <height>360</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="formLayout_3">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>发射雷达与目标速度（M/S）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="SpeedTranLineEditType2"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_28">
+             <property name="text">
+              <string>发射雷达与目标速度（M/S）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="SpeedRecvLineEditType2"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_33">
+             <property name="text">
+              <string>Pt（dBm）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="PtLineEditType2"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_34">
+             <property name="text">
+              <string>G（dBm）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="GLineEditType2"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_35">
+             <property name="text">
+              <string>Ae（dBm）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="AeLineEditType2"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_38">
+             <property name="text">
+              <string>地理坐标系下发射雷达坐标X</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="GroundRadarTransXLineEditType2"/>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_39">
+             <property name="text">
+              <string>地理坐标系下发射雷达坐标Y</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLineEdit" name="GroundRadarTransYLineEditType2"/>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_40">
+             <property name="text">
+              <string>地理坐标系下发射雷达坐标Z</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QLineEdit" name="GroundRadarTransZLineEditType2"/>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_43">
+             <property name="text">
+              <string>地理坐标系下目标坐标X</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QLineEdit" name="GroundTargetXLineEditType2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_41">
+             <property name="text">
+              <string>地理坐标系下目标坐标Y</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="GroundTargetYLineEditType2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_42">
+             <property name="text">
+              <string>地理坐标系下目标坐标Z</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLineEdit" name="GroundTargetZLineEditType2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="label_46">
+             <property name="text">
+              <string>地理坐标系下接收雷达坐标X</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QLineEdit" name="GroundRadarRecvXLineEditType2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLabel" name="label_44">
+             <property name="text">
+              <string>地理坐标系下接收雷达坐标Y</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="1">
+            <widget class="QLineEdit" name="GroundRadarRecvYLineEditType2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0">
+            <widget class="QLabel" name="label_45">
+             <property name="text">
+              <string>地理坐标系下接收雷达坐标Z</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="1">
+            <widget class="QLineEdit" name="GroundRadarRecvZLineEditType2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>301</x>
+            <y>1</y>
+            <width>441</width>
+            <height>152</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="formLayout_4">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_48">
+             <property name="text">
+              <string>地理坐标系变换到阵面坐标系需绕OX轴转动角（°）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="GroundToRadarXLineEditType2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_49">
+             <property name="text">
+              <string>地理坐标系变换到阵面坐标系需绕OY轴转动角（°）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="GroundToRadarYLineEditType2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_51">
+             <property name="text">
+              <string>地理坐标系变换到阵面坐标系需绕OZ轴转动角（°）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="GroundToRadarZLineEditType2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_53">
+             <property name="text">
+              <string>地理坐标系变换到目标固联坐标系需绕OX轴转动角（°）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="GroundToTargetXLineEditType2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_54">
+             <property name="text">
+              <string>地理坐标系变换到目标固联坐标系需绕OY轴转动角（°）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="GroundToTargetYLineEditType2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_55">
+             <property name="text">
+              <string>地理坐标系变换到目标固联坐标系需绕OZ轴转动角（°）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="GroundToTargetZLineEditType2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="TargetParamType3CurrentTab">
+         <attribute name="title">
+          <string>方式3</string>
+         </attribute>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>291</width>
+            <height>437</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="formLayout_5">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_29">
+             <property name="text">
+              <string>发射雷达与目标速度（M/S）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="SpeedTranLineEditType3"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_30">
+             <property name="text">
+              <string>发射雷达与目标速度（M/S）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="SpeedRecvLineEditType3"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_36">
+             <property name="text">
+              <string>Pt（dBm）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="PtLineEditType3"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_37">
+             <property name="text">
+              <string>G（dBm）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="GLineEditType3"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_47">
+             <property name="text">
+              <string>Ae（dBm）</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="AeLineEditType3"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_50">
+             <property name="text">
+              <string>地理坐标系下发射雷达坐标X</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="GroundRadarTransXLineEditType3"/>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_52">
+             <property name="text">
+              <string>地理坐标系下发射雷达坐标Y</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLineEdit" name="GroundRadarTransYLineEditType3"/>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_56">
+             <property name="text">
+              <string>地理坐标系下发射雷达坐标Z</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QLineEdit" name="GroundRadarTransZLineEditType3"/>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_57">
+             <property name="text">
+              <string>地理坐标系下目标坐标X</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QLineEdit" name="GroundTargetXLineEditType3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_58">
+             <property name="text">
+              <string>地理坐标系下目标坐标Y</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="GroundTargetYLineEditType3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_59">
+             <property name="text">
+              <string>地理坐标系下目标坐标Z</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLineEdit" name="GroundTargetZLineEditType3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="label_60">
+             <property name="text">
+              <string>地理坐标系下接收雷达坐标X</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QLineEdit" name="GroundRadarRecvXLineEditType3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLabel" name="label_61">
+             <property name="text">
+              <string>地理坐标系下接收雷达坐标Y</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="1">
+            <widget class="QLineEdit" name="GroundRadarRecvYLineEditType3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0">
+            <widget class="QLabel" name="label_62">
+             <property name="text">
+              <string>地理坐标系下接收雷达坐标Z</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="1">
+            <widget class="QLineEdit" name="GroundRadarRecvZLineEditType3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLineEdit" name="TargetAxisXCoordinateXLineEditType3">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>160</y>
+            <width>133</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_69">
+          <property name="geometry">
+           <rect>
+            <x>304</x>
+            <y>290</y>
+            <width>300</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>地理坐标系下目标固联坐标系OY轴矢量坐标Z</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="TargetAxisYCoordinateXLineEditType3">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>238</y>
+            <width>133</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="TargetAxisXCoordinateZLineEditType3">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>212</y>
+            <width>133</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_70">
+          <property name="geometry">
+           <rect>
+            <x>304</x>
+            <y>212</y>
+            <width>276</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>地理坐标系下目标固联坐标系OX轴矢量坐标Z</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_71">
+          <property name="geometry">
+           <rect>
+            <x>304</x>
+            <y>186</y>
+            <width>276</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>地理坐标系下目标固联坐标系OX轴矢量坐标Y</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_72">
+          <property name="geometry">
+           <rect>
+            <x>304</x>
+            <y>238</y>
+            <width>300</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>地理坐标系下目标固联坐标系OY轴矢量坐标X</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_73">
+          <property name="geometry">
+           <rect>
+            <x>304</x>
+            <y>264</y>
+            <width>300</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>地理坐标系下目标固联坐标系OY轴矢量坐标Y</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="TargetAxisXCoordinateYLineEditType3">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>186</y>
+            <width>133</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="TargetAxisYCoordinateYLineEditType3">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>264</y>
+            <width>133</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_74">
+          <property name="geometry">
+           <rect>
+            <x>304</x>
+            <y>160</y>
+            <width>276</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>地理坐标系下目标固联坐标系OX轴矢量坐标X</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="TargetAxisYCoordinateZLineEditType3">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>290</y>
+            <width>133</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QTextEdit" name="TargetParamTypeTextEdit3">
+          <property name="geometry">
+           <rect>
+            <x>300</x>
+            <y>310</y>
+            <width>441</width>
+            <height>151</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_67">
+          <property name="geometry">
+           <rect>
+            <x>301</x>
+            <y>105</y>
+            <width>300</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>地理坐标系下阵面坐标系OY轴矢量坐标Y</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_66">
+          <property name="geometry">
+           <rect>
+            <x>301</x>
+            <y>79</y>
+            <width>300</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>地理坐标系下阵面坐标系OY轴矢量坐标X</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="RadarAxisYCoordinateXLineEditType3">
+          <property name="geometry">
+           <rect>
+            <x>607</x>
+            <y>79</y>
+            <width>133</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_65">
+          <property name="geometry">
+           <rect>
+            <x>301</x>
+            <y>53</y>
+            <width>276</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>地理坐标系下阵面坐标系OX轴矢量坐标Z</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="RadarAxisXCoordinateYLineEditType3">
+          <property name="geometry">
+           <rect>
+            <x>607</x>
+            <y>27</y>
+            <width>133</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="RadarAxisXCoordinateZLineEditType3">
+          <property name="geometry">
+           <rect>
+            <x>607</x>
+            <y>53</y>
+            <width>133</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="RadarAxisYCoordinateZLineEditType3">
+          <property name="geometry">
+           <rect>
+            <x>607</x>
+            <y>131</y>
+            <width>133</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="RadarAxisYCoordinateYLineEditType3">
+          <property name="geometry">
+           <rect>
+            <x>607</x>
+            <y>105</y>
+            <width>133</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_68">
+          <property name="geometry">
+           <rect>
+            <x>301</x>
+            <y>131</y>
+            <width>300</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>地理坐标系下阵面坐标系OY轴矢量坐标Z</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_64">
+          <property name="geometry">
+           <rect>
+            <x>301</x>
+            <y>27</y>
+            <width>276</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>地理坐标系下阵面坐标系OX轴矢量坐标Y</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="RadarAxisXCoordinateXLineEditType3">
+          <property name="geometry">
+           <rect>
+            <x>607</x>
+            <y>1</y>
+            <width>133</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_63">
+          <property name="geometry">
+           <rect>
+            <x>301</x>
+            <y>1</y>
+            <width>276</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>地理坐标系下阵面坐标系OX轴矢量坐标X</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="widget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>741</width>
+         <height>479</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>干扰参数</string>
+       </attribute>
+       <widget class="QTabWidget" name="JammingTypeTab">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>751</width>
+          <height>501</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="NoJammingCurrentTab">
+         <attribute name="title">
+          <string>无干扰</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="IsrjCurrentTab">
+         <attribute name="title">
+          <string>间歇采样转发式干扰</string>
+         </attribute>
+         <widget class="QTabWidget" name="IsrjTab">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>741</width>
+            <height>662</height>
+           </rect>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="IsjrCurrentType0Tab">
+           <attribute name="title">
+            <string>方式0</string>
+           </attribute>
+           <widget class="QWidget" name="layoutWidget">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>11</y>
+              <width>309</width>
+              <height>230</height>
+             </rect>
+            </property>
+            <layout class="QFormLayout" name="formLayout_6">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_31">
+               <property name="text">
+                <string>干扰速度（M/S）</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="IsrjSpeedLineEditType0"/>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_75">
+               <property name="text">
+                <string>干扰功率（dBm）</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="IsrjPowerLineEditType0"/>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_76">
+               <property name="text">
+                <string>干扰距离（M）</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="IsrjDistanceLineEditType0"/>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_78">
+               <property name="text">
+                <string>阵面坐标系下干扰俯仰角（°）</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="IsrjThetaLineEditType0"/>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_79">
+               <property name="text">
+                <string>阵面坐标系下干扰方位角（°）</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLineEdit" name="IsrjPhiLineEditType0"/>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="label_87">
+               <property name="text">
+                <string>采样时宽</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLineEdit" name="IsrjSampleWidthLineEditType0"/>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_88">
+               <property name="text">
+                <string>转发时宽</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QLineEdit" name="IsrjRepeatWidthLineEditType0"/>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="label_90">
+               <property name="text">
+                <string>转发起始时间</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <widget class="QLineEdit" name="IsrjRepeatStartLineEditType0"/>
+             </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="label_89">
+               <property name="text">
+                <string>转发次数</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="1">
+              <widget class="QLineEdit" name="IsrjRepeatNumLineEditType0"/>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="IsjrCurrentType1Tab">
+           <attribute name="title">
+            <string>方式1</string>
+           </attribute>
+           <widget class="QTextEdit" name="IsrjParamTypeTextEdit1">
+            <property name="geometry">
+             <rect>
+              <x>380</x>
+              <y>10</y>
+              <width>351</width>
+              <height>411</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QWidget" name="layoutWidget">
+            <property name="geometry">
+             <rect>
+              <x>12</x>
+              <y>13</y>
+              <width>361</width>
+              <height>308</height>
+             </rect>
+            </property>
+            <layout class="QFormLayout" name="formLayout_7">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_32">
+               <property name="text">
+                <string>干扰速度（M/S）</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="IsrjSpeedLineEditType1"/>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_77">
+               <property name="text">
+                <string>干扰功率（dBm）</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="IsrjPowerLineEditType1"/>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_80">
+               <property name="text">
+                <string>地理坐标系下等效干扰目标坐标X</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="IsrjXEditType1"/>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_81">
+               <property name="text">
+                <string>地理坐标系下等效干扰目标坐标Y</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="IsrjYEditType1"/>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_82">
+               <property name="text">
+                <string>地理坐标系下等效干扰目标坐标Z</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLineEdit" name="IsrjZEditType1"/>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="label_83">
+               <property name="text">
+                <string>采样时宽</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLineEdit" name="IsrjSampleWidthLineEditType1"/>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_84">
+               <property name="text">
+                <string>转发时宽</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QLineEdit" name="IsrjRepeatWidthLineEditType1"/>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="label_85">
+               <property name="text">
+                <string>转发起始时间</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <widget class="QLineEdit" name="IsrjRepeatStartLineEditType1"/>
+             </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="label_86">
+               <property name="text">
+                <string>转发次数</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="1">
+              <widget class="QLineEdit" name="IsrjRepeatNumLineEditType1"/>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QLineEdit" name="NoisePowerLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>540</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>6</x>
+        <y>540</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>噪声功率</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ManualSendPushButton">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>540</y>
+        <width>97</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>发送</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="AutoModeCurrentTab">
+     <attribute name="title">
+      <string>自动模式</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QComboBox" name="ScatTypeComboBox">
+    <property name="geometry">
+     <rect>
+      <x>789</x>
+      <y>96</y>
+      <width>161</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>ScatModel1</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="ScatPointImportPushButton">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>120</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>导入散射点</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="EthernetInitPushButton">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>网口初始化</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="EthernetComboBox">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>10</y>
+      <width>381</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
