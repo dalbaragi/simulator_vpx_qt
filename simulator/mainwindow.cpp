@@ -268,8 +268,9 @@ void MainWindow::ScatPointImport()
             //监测IP和端口
             if((RecvSender.toIPv4Address() == Sender.toIPv4Address())&&(RecvSenderPort == SenderPort))
             {
-                if(*RecvData.data() != 0x01)
+                if((char)*(RecvData.data()) != 0x01)
                 {
+                    qDebug() << "*(RecvData.data()) =" << (int)*(RecvData.data());
                     QMessageBox::about(this, "错误", "散射点导入错误！");
                 }
                 break;
@@ -451,10 +452,35 @@ void MainWindow::SendSigParamFrame()
                     }
                     else if(WorkParamSetBackData.TargetFrameId == RANGE_SPREAD_TARGET_0)
                     {
-//                        if(*RecvData.data() != 0x01)
-//                        {
-//                            QMessageBox::about(this, "错误", "目标参数0，回传出错！");
-//                        }
+                        QString TextEditString;
+                        TextEditString.clear();
+                        //clear the TextEdit
+                        ui->TargetParamTypeTextEdit1->clear();
+                        for(int i = 0 ; i < RANGE_PROFILE_NUM ; ++i)
+                        {
+                            TextEditString.sprintf("散射点幅度[%d] = %f\n",
+                                                i, WorkParamSetBackData.TargetParamBack.RangeSpreadTargetParam0SetBackFrame.RangeProfile[i]);
+                            ui->TargetParamTypeTextEdit1->append(TextEditString);
+                        }
+                    }
+                    else if(WorkParamSetBackData.TargetFrameId == RANGE_SPREAD_TARGET_1)
+                    {
+                        QString TextEditString;
+                        TextEditString.clear();
+                        //clear the TextEdit
+                        ui->TargetParamTypeTextEdit1->clear();
+                        TextEditString.sprintf("俯仰角偏差为 %f\n", WorkParamSetBackData.TargetParamBack.RangeSpreadTargetParam12SetBackFrame.AngleDeviationTheta);
+                        TextEditString.sprintf("方位角偏差为 %f\n", WorkParamSetBackData.TargetParamBack.RangeSpreadTargetParam12SetBackFrame.AngleDeviationPhi);
+                        TextEditString.sprintf("俯仰线偏差为 %f\n", WorkParamSetBackData.TargetParamBack.RangeSpreadTargetParam12SetBackFrame.LineDeviationTheta);
+                        TextEditString.sprintf("方位线偏差为 %f\n", WorkParamSetBackData.TargetParamBack.RangeSpreadTargetParam12SetBackFrame.LineDeviationPhi);
+                        TextEditString.sprintf("接收距离为 %f\n", WorkParamSetBackData.TargetParamBack.RangeSpreadTargetParam12SetBackFrame.TargetDistanceRecv);
+                        TextEditString.sprintf("发送距离为 %f\n", WorkParamSetBackData.TargetParamBack.RangeSpreadTargetParam12SetBackFrame.TargetDistanceTran);
+                        for(int i = 0 ; i < RANGE_PROFILE_NUM ; ++i)
+                        {
+                            TextEditString.sprintf("散射点幅度[%d] = %f\n",
+                                                i, WorkParamSetBackData.TargetParamBack.RangeSpreadTargetParam12SetBackFrame.RangeProfile[i]);
+                        }
+                        ui->TargetParamTypeTextEdit1->append(TextEditString);
                     }
                     //干扰回传
                     //无干扰
