@@ -49,17 +49,15 @@ typedef char Int8;
 //--------目标参数----------------------
 //点目标
 typedef struct
-{    
-    float TranSpeed;
-    float RecvSpeed;
-    float Power;
-    float TranDistance;
-    float RecvDistance;
+{
+    float TargetSpeedTran;
+    float TargetSpeedRecv;
+    float TargetPower;
+    float TargetDistanceTran;
+    float TargetDistanceRecv;
     float TargetTheta;
     float TargetPhi;
-    int   TargetFrameId;
 }PointTargetParam;
-
 //扩展目标，参数0
 typedef struct
 {
@@ -74,7 +72,6 @@ typedef struct
     float TargetAe;
     float TargetAttitudeTheta;
     float TargetAttitudePhi;
-    int   TargetFrameId;
 }RangeSpreadTargetParam0;
 //扩展目标，参数1
 typedef struct
@@ -99,7 +96,6 @@ typedef struct
     float GroundCoordToTargetCoordAngleX;
     float GroundCoordToTargetCoordAngleY;
     float GroundCoordToTargetCoordAngleZ;
-    int   TargetFrameId;
 }RangeSpreadTargetParam1;
 //扩展目标，参数2
 typedef struct
@@ -130,7 +126,6 @@ typedef struct
     float TargetCoordOyVectorX;
     float TargetCoordOyVectorY;
     float TargetCoordOyVectorZ;
-    int   TargetFrameId;
 }RangeSpreadTargetParam2;
 
 //--------干扰参数----------------------
@@ -186,8 +181,8 @@ typedef struct
 /* 网口帧  */
 typedef struct
 {
-    int 	FrameId;
-    int 	TargetFrameId;
+    int		FrameId;
+    int		TargetFrameId;
     union
     {
         PointTargetParam 		TargetParam0Data;
@@ -195,7 +190,7 @@ typedef struct
         RangeSpreadTargetParam1	RangeSpreadTargetParam1Data;
         RangeSpreadTargetParam2	RangeSpreadTargetParam2Data;
     }TargetFrame;
-    int 	JammingFrameId;
+    int		JammingFrameId;
     union
     {
         JammingIsrjParam0		JammingIsrjParam0Data;

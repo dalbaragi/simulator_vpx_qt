@@ -309,14 +309,14 @@ void MainWindow::SendSigParamFrame()
     if(ui->TargetParamTypeTab->currentIndex() == 0)
     {
         PointTargetParam PointTargetParamTmp;
-        PointTargetParamTmp.TranSpeed       = ui->SpeedTranLineEditType0->text().toFloat();
-        PointTargetParamTmp.RecvSpeed       = ui->SpeedRecvLineEditType0->text().toFloat();
-        PointTargetParamTmp.Power           = ui->PowerLineEditType0->text().toFloat();
-        PointTargetParamTmp.TranDistance    = ui->DistanceTranLineEditType0->text().toFloat();
-        PointTargetParamTmp.RecvDistance    = ui->DistanceRecvLineEditType0->text().toFloat();
-        PointTargetParamTmp.TargetTheta     = ui->ThetaLineEditType0->text().toFloat();
-        PointTargetParamTmp.TargetPhi       = ui->PhiLineEditType0->text().toFloat();
-        UdpFrameData.TargetFrameId          |= POINT_TARGET;
+        PointTargetParamTmp.TargetSpeedTran       = ui->SpeedTranLineEditType0->text().toFloat();
+        PointTargetParamTmp.TargetSpeedRecv       = ui->SpeedRecvLineEditType0->text().toFloat();
+        PointTargetParamTmp.TargetPower           = ui->PowerLineEditType0->text().toFloat();
+        PointTargetParamTmp.TargetDistanceTran    = ui->DistanceTranLineEditType0->text().toFloat();
+        PointTargetParamTmp.TargetDistanceRecv    = ui->DistanceRecvLineEditType0->text().toFloat();
+        PointTargetParamTmp.TargetTheta           = ui->ThetaLineEditType0->text().toFloat();
+        PointTargetParamTmp.TargetPhi             = ui->PhiLineEditType0->text().toFloat();
+        UdpFrameData.TargetFrameId                |= POINT_TARGET;
         memcpy(&UdpFrameData.TargetFrame, &PointTargetParamTmp, sizeof(UdpFrameData.TargetFrame));
     }
     //扩展目标参数0
@@ -368,7 +368,6 @@ void MainWindow::SendSigParamFrame()
     else if(ui->TargetParamTypeTab->currentIndex() == 3)
     {
         RangeSpreadTargetParam2 RangeSpreadTargetParam2Tmp;
-        RangeSpreadTargetParam2Tmp.TargetFrameId            = 0x03;
         RangeSpreadTargetParam2Tmp.TargetSpeedTran          = ui->SpeedTranLineEditType3->text().toFloat();
         RangeSpreadTargetParam2Tmp.TargetSpeedRecv          = ui->SpeedRecvLineEditType3->text().toFloat();
         RangeSpreadTargetParam2Tmp.TargetPt                 = ui->PtLineEditType3->text().toFloat();
@@ -423,6 +422,7 @@ void MainWindow::SendSigParamFrame()
 
     //网口发送
     UdpSocket->writeDatagram((char*)&UdpFrameData, sizeof(WorkParamUdpFrame), Sender, SenderPort);
+
 
     //记时1秒
     Timer.start(1000);
